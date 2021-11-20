@@ -89,7 +89,19 @@ while 1:
             continue
     if depression < 1:  # fix negative depression
         depression = 0
-    print("placeholder")
+    if randint(0, 1) == 1:
+        print("WAOW YA DES 3ème QUI VEULE TE VOLER TON GOUTER TU FAIS QUoI XDD LOL MDR")
+        while 1:
+            a = input("1. donner le gouter 2. s'enfuir 3. se BATTRE #violence")
+            try:
+                int(a)
+            except ValueError:
+                print("MAIS UN CHIFFRES HAHAHAHHA MDR XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD")
+                continue
+            a = int(a)
+            if a == 1:
+                print("Ta donné le gouté et té pa mors #triste #collège #no #;(")
+    print("\n" * 1)
 print("hahahah t'est mort ! bon débara !")
 if randint(0, 1):
     print("tes parents ont pleuré pour toi... il te regrette !")
