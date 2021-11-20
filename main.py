@@ -87,8 +87,6 @@ while 1:
         else:
             print("FAIT QUELQCHOSE LOLOL MDR XDDDDDD")
             continue
-    if depression < 1:  # fix negative depression
-        depression = 0
     if randint(0, 1) == 1:
         print("WAOW YA DES 3ème QUI VEULE TE VOLER TON GOUTER TU FAIS QUoI XDD LOL MDR")
         while 1:
@@ -101,6 +99,25 @@ while 1:
             a = int(a)
             if a == 1:
                 print("Ta donné le gouté et té pa mors #triste #collège #no #;(")
+                depression = depression + 15
+                break
+            elif a == 2:
+                if randint(0, 1) == 1:
+                    print("BRAVO BRAVO !!!!!!!!!?????!!!! kgfvjbhibiu tA RéUSI")
+                else:
+                    print("TU Té Fé AVOIR HAHHAHAHAHAHA tê NULLE MDRRRRRRRRRRR")
+                    depression = depression + 5
+                break
+            elif a == 3:
+                if randint(1, 3) == 3:
+                    print("YES KO KO KO LE 3ème EST KOOOOOOOOOOOOO KZIEUHFLBZHZULKEFUKZJNEFJZBHEYFLKIZEJHNFMIOZKNEF")
+                    depression = depression - 15
+                else:
+                    print("ohoohohohohoh ta pa réUSSIIII MDR XDDDDDDDDDDDDDDDd")
+                    depression = depression + 20
+                break
+    if depression < 1:  # fix negative depression
+        depression = 0
     print("\n" * 1)
 print("hahahah t'est mort ! bon débara !")
 if randint(0, 1):
