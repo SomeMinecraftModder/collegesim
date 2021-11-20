@@ -1,4 +1,6 @@
 from random import choice, randint, seed
+from colorama import Fore, Back, Style
+
 
 print("whaou bienvenue à collège simulator !!!")
 print("v 0.3 version public")
@@ -16,22 +18,28 @@ observation = 0
 sanc = False
 
 while 1:
-    print("jour %s : %s" % (jour, choice(fun_name_for_day)))
+    print(Fore.BLACK)
+    print(Back.WHITE + "jour %s : %s" % (jour, choice(fun_name_for_day)))
+    print(Style.RESET_ALL)
     jour = jour + 1
     print("%s : t'est nul !" % choice(nomprof))
     thing = randint(1, 4)
     if thing == 1:
         b = randint(1, 5)
         heure_de_colle = heure_de_colle + b
-        print("plus %s heure de colle !" % b)
+        print(Fore.RED + "plus %s heure de colle !" % b)
+        print(Style.RESET_ALL)
     elif thing == 2:
-        print("t'a une observation !!!!")
+        print(Fore.RED + "t'a une observation !!!!")
+        print(Style.RESET_ALL)
         observation = observation + 1
     elif thing == 3:
-        print("sanction ! ta mère t'attend à ta maison !!!")
+        print(Fore.RED + "sanction ! ta mère t'attend à ta maison !!!")
+        print(Style.RESET_ALL)
         sanc = True
     else:
-        print("t'a de la chance que t'a rien !!!")
+        print(Fore.LIGHTGREEN_EX + "t'a de la chance que t'a rien !!!")
+        print(Style.RESET_ALL)
     if depression > 99:
         print("tu t'est suicidé !")
         break
