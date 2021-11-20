@@ -3,9 +3,10 @@ from random import choice, randint, seed
 print("whaou bienvenue à collège simulator !!!")
 print("v 0.3 version public")
 a = input("whaou c'est quoi ton nom ???")
-seed(a)
+seed(a)  # can't wait for speedrun set-seed
 print("erreur: ton nom est maintenant jean-pierre decrochage")
 
+fun_name_for_day = ["souffrance", "ennuyance", "inutile", "interweb", "pipi caca prout", "je", "fun", "i like life"]
 nomprof = ("enfoiré: math", "amé: français", "homework: histoire")
 qi = 120
 depression = 0
@@ -15,7 +16,7 @@ observation = 0
 sanc = False
 
 while 1:
-    print("jour %s : souffrance" % jour)
+    print("jour %s : %s" % (jour, choice(fun_name_for_day)))
     jour = jour + 1
     print("%s : t'est nul !" % choice(nomprof))
     thing = randint(1, 4)
@@ -50,7 +51,7 @@ while 1:
     print("ancien qi : %s" % qi)
     print("ancienne depresion : %s" % depression)
     print("---")
-    d = ((depression / 3) + ((int(heure_de_colle) / 5) + observation + (depression / 35))) # mess
+    d = ((depression / 3) + ((int(heure_de_colle) / 5) + observation + (depression / 35)))  # mess
     if sanc:
         d = d + 15
         sanc = False
@@ -60,11 +61,11 @@ while 1:
     qi = int(e)
     print("qi: %s" % qi)
     truc = None
-    while 1: # loop for input
+    while 1:  # loop for input
         f = input("(1)travailler ou se (2)reposer ?")
         try:
             truc = int(f)
-        except:
+        except ValueError:
             pass
         if truc == 1:
             if randint(0, 5):
@@ -88,6 +89,7 @@ while 1:
             continue
     if depression < 1:  # fix negative depression
         depression = 0
+    print("placeholder")
 print("hahahah t'est mort ! bon débara !")
 if randint(0, 1):
     print("tes parents ont pleuré pour toi... il te regrette !")
