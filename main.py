@@ -15,7 +15,7 @@ depression = 0
 jour = 1
 heure_de_colle = 0
 observation = 0
-sanc = False
+sanction = False
 
 while 1:
     print(Fore.BLACK)
@@ -36,7 +36,7 @@ while 1:
     elif thing == 3:
         print(Fore.RED + "sanction ! ta mère t'attend à ta maison !!!")
         print(Style.RESET_ALL)
-        sanc = True
+        sanction = True
     else:
         print(Fore.LIGHTGREEN_EX + "t'a de la chance que t'a rien !!!")
         print(Style.RESET_ALL)
@@ -59,12 +59,12 @@ while 1:
     print("ancien qi : %s" % qi)
     print("ancienne depresion : %s" % depression)
     print("---")
-    d = ((depression / 3) + ((int(heure_de_colle) / 5) + observation + (depression / 35)))  # mess
-    if sanc:
+    d = (depression + ((int(heure_de_colle) / 5) + observation + (depression / 35)))  # mess
+    if sanction:
         d = d + 15
-        sanc = False
+        sanction = False
     depression = int(d)
-    print("depresion: %s" % depression)
+    print("depression: %s" % depression)
     e = qi - (depression / 25)
     qi = int(e)
     print("qi: %s" % qi)
@@ -76,9 +76,7 @@ while 1:
         except ValueError:
             pass
         if truc == 1:
-            if randint(0, 5):
-                depression = depression + randint(2, 15)
-            depression = depression + randint(10, 25)
+            depression = depression + 15 + randint(0, 5)
             heure_de_colle = heure_de_colle - 1
             observation = observation - 1
             qi = qi + 5
@@ -86,7 +84,7 @@ while 1:
                 heure_de_colle = 0
             if observation < 1:
                 observation = 0
-                break
+            break
         elif truc == 2:
             depression = depression - randint(8, 18)
             if heure_de_colle < 1:
@@ -95,7 +93,7 @@ while 1:
         else:
             print("FAIT QUELQCHOSE LOLOL MDR XDDDDDD")
             continue
-    if randint(0, 1) == 1:
+    if randint(0, 2) == 1:
         print("WAOW YA DES 3ème QUI VEULE TE VOLER TON GOUTER TU FAIS QUoI XDD LOL MDR")
         while 1:
             a = input("1. donner le gouter 2. s'enfuir 3. se BATTRE #violence")
@@ -126,6 +124,7 @@ while 1:
                 break
     if depression < 1:  # fix negative depression
         depression = 0
+    garbage = input("appuie sur entrer pour terminer la journé")
     print("\n" * 1)
 print("hahahah t'est mort ! bon débara !")
 if randint(0, 1):
