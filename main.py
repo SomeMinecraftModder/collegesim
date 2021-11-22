@@ -3,6 +3,7 @@ from colorama import Fore, Back, Style
 
 print("whaou bienvenue à collège simulator !!!")
 print("v 0.3 version public")
+print("Le seul jeu sponsorisé par https://webgarbage.fr")
 a = input("whaou c'est quoi ton nom ???")
 seed(a)  # can't wait for speedrun set-seed
 print("erreur: ton nom est maintenant jean-pierre decrochage")
@@ -75,6 +76,9 @@ while 1:
             else:
                 print(Fore.LIGHTGREEN_EX + "t'a de la chance que t'a rien !!!")
                 print(Style.RESET_ALL)
+            garbage = input("1. suivre les cours de l'éducation national™® 2. ne rien faire 3. tiago (bêta)")
+
+
         while 1:  # loop for input
             f = input("(1)travailler ou se (2)reposer ?")
             try:
