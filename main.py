@@ -15,7 +15,7 @@ jour = 1
 heure_de_colle = 0
 observation = 0
 sanction = False
-edt = [[], [], [], [], []]
+edt = [[0, 1, 2], [1, 0, 2], [0, 2, 1], [2, 0, 1], [2, 1, 0]]
 name_of_day = ["Lundi", "Mardi", 'Mercredi', "Jeudi", "Vendredie", "Samedi", "Dimanche"]
 
 while 1:
@@ -24,7 +24,7 @@ while 1:
     print("Jour de la semaine: %s" % name_of_day[jour % 7])
     print(Style.RESET_ALL)
     jour = jour + 1
-    if not jour % 7 == 5 or not jour % 7 == 6:
+    if not (jour % 7 == 6 or jour % 7 == 7):
         if randint(0, 2) == 1:
             print("WAOW YA DES 3ème QUI VEULE TE VOLER TON GOUTER TU FAIS QUoI XDD LOL MDR")
             while 1:
@@ -48,30 +48,55 @@ while 1:
                     break
                 elif a == 3:
                     if randint(1, 3) == 3:
-                        print("YES KO KO KO LE 3ème EST KOOOOOOOOOOOOO KZIEUHFLBZHZULKEFUKZJNEFJZBHEYFLKIZEJHNFMIOZKNEF")
+                        print("YES KO KO KO LE 3ème EST KOOOOOOOOOOOOO KZIEUHFLBZHZULKEFUKZJNEFJZBHEYFKIZEJHNFMIOZKNEF")
                         depression = depression - 15
                     else:
                         print("ohoohohohohoh ta pa réUSSIIII MDR XDDDDDDDDDDDDDDDd")
                         depression = depression + 20
                     break
-        print("%s : t'est nul !" % choice(nomprof))
-        thing = randint(1, 4)
-        if thing == 1:
-            b = randint(1, 5)
-            heure_de_colle = heure_de_colle + b
-            print(Fore.RED + "plus %s heure de colle !" % b)
-            print(Style.RESET_ALL)
-        elif thing == 2:
-            print(Fore.RED + "t'a une observation !!!!")
-            print(Style.RESET_ALL)
-            observation = observation + 1
-        elif thing == 3:
-            print(Fore.RED + "sanction ! ta mère t'attend à ta maison !!!")
-            print(Style.RESET_ALL)
-            sanction = True
-        else:
-            print(Fore.LIGHTGREEN_EX + "t'a de la chance que t'a rien !!!")
-            print(Style.RESET_ALL)
+        current_day_number = jour % 7 - 1
+        edt_current = edt[current_day_number]
+        for x in edt_current:
+            print("%s : t'est nul !" % nomprof[x])
+            thing = randint(1, 10)
+            if thing == 1:
+                b = randint(1, 5)
+                heure_de_colle = heure_de_colle + b
+                print(Fore.RED + "plus %s heure de colle !" % b)
+                print(Style.RESET_ALL)
+            elif thing == 2:
+                print(Fore.RED + "t'a une observation !!!!")
+                print(Style.RESET_ALL)
+                observation = observation + 1
+            elif thing == 3:
+                print(Fore.RED + "sanction ! ta mère t'attend à ta maison !!!")
+                print(Style.RESET_ALL)
+                sanction = True
+            else:
+                print(Fore.LIGHTGREEN_EX + "t'a de la chance que t'a rien !!!")
+                print(Style.RESET_ALL)
+        while 1:  # loop for input
+            f = input("(1)travailler ou se (2)reposer ?")
+            try:
+                truc = int(f)
+                break
+            except ValueError:
+                print("FAIT QUELQCHOSE LOLOL MDR XDDDDDD")
+        if truc == 1:
+            depression = depression + 15 + randint(0, 5)
+            heure_de_colle = heure_de_colle - 1
+            observation = observation - 1
+            qi = qi + 5
+            if heure_de_colle < 1:
+                heure_de_colle = 0
+            if observation < 1:
+                observation = 0
+        elif truc == 2:
+            depression = depression - randint(8, 20)
+            if heure_de_colle < 1:
+                heurcoll = 0
+        if depression < 1:  # fix negative depression
+            depression = 0
         if depression > 99:
             print("tu t'est suicidé !")
             break
@@ -101,34 +126,6 @@ while 1:
         qi = int(e)
         print("qi: %s" % qi)
         truc = None
-
-        while 1:  # loop for input
-            f = input("(1)travailler ou se (2)reposer ?")
-            try:
-                truc = int(f)
-            except ValueError:
-                pass
-            if truc == 1:
-                depression = depression + 15 + randint(0, 5)
-                heure_de_colle = heure_de_colle - 1
-                observation = observation - 1
-                qi = qi + 5
-                if heure_de_colle < 1:
-                    heure_de_colle = 0
-                if observation < 1:
-                    observation = 0
-                break
-            elif truc == 2:
-                depression = depression - randint(8, 18)
-                if heure_de_colle < 1:
-                    heurcoll = 0
-                break
-            else:
-                print("FAIT QUELQCHOSE LOLOL MDR XDDDDDD")
-                continue
-
-    if depression < 1:  # fix negative depression
-        depression = 0
     garbage = input("appuie sur entrer pour terminer la journé")
     print("\n" * 1)
 print("hahahah t'est mort ! bon débara !")
