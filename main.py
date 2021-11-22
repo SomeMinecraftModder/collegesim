@@ -1,7 +1,6 @@
 from random import choice, randint, seed
 from colorama import Fore, Back, Style
 
-
 print("whaou bienvenue à collège simulator !!!")
 print("v 0.3 version public")
 a = input("whaou c'est quoi ton nom ???")
@@ -9,19 +8,49 @@ seed(a)  # can't wait for speedrun set-seed
 print("erreur: ton nom est maintenant jean-pierre decrochage")
 
 fun_name_for_day = ["souffrance", "ennuyance", "inutile", "interweb", "pipi caca prout", "je", "fun", "i like life"]
-nomprof = ("enfoiré: math", "amé: français", "homework: histoire")
+nomprof = ("enfoiré: math", "amé: français", "gégoutosaure: histoire")
 qi = 120
 depression = 0
 jour = 1
 heure_de_colle = 0
 observation = 0
 sanction = False
+edt = [[], [], [], [], []]
 
 while 1:
     print(Fore.BLACK)
     print(Back.WHITE + "jour %s : %s" % (jour, choice(fun_name_for_day)))
     print(Style.RESET_ALL)
     jour = jour + 1
+    if randint(0, 2) == 1:
+        print("WAOW YA DES 3ème QUI VEULE TE VOLER TON GOUTER TU FAIS QUoI XDD LOL MDR")
+        while 1:
+            a = input("1. donner le gouter 2. s'enfuir 3. se BATTRE #violence")
+            try:
+                int(a)
+            except ValueError:
+                print("MAIS UN CHIFFRES HAHAHAHHA MDR XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD")
+                continue
+            a = int(a)
+            if a == 1:
+                print("Ta donné le gouté et té pa mors #triste #collège #no #;(")
+                depression = depression + 15
+                break
+            elif a == 2:
+                if randint(0, 1) == 1:
+                    print("BRAVO BRAVO !!!!!!!!!?????!!!! kgfvjbhibiu tA RéUSI")
+                else:
+                    print("TU Té Fé AVOIR HAHHAHAHAHAHA tê NULLE MDRRRRRRRRRRR")
+                    depression = depression + 5
+                break
+            elif a == 3:
+                if randint(1, 3) == 3:
+                    print("YES KO KO KO LE 3ème EST KOOOOOOOOOOOOO KZIEUHFLBZHZULKEFUKZJNEFJZBHEYFLKIZEJHNFMIOZKNEF")
+                    depression = depression - 15
+                else:
+                    print("ohoohohohohoh ta pa réUSSIIII MDR XDDDDDDDDDDDDDDDd")
+                    depression = depression + 20
+                break
     print("%s : t'est nul !" % choice(nomprof))
     thing = randint(1, 4)
     if thing == 1:
@@ -69,6 +98,7 @@ while 1:
     qi = int(e)
     print("qi: %s" % qi)
     truc = None
+
     while 1:  # loop for input
         f = input("(1)travailler ou se (2)reposer ?")
         try:
@@ -93,35 +123,7 @@ while 1:
         else:
             print("FAIT QUELQCHOSE LOLOL MDR XDDDDDD")
             continue
-    if randint(0, 2) == 1:
-        print("WAOW YA DES 3ème QUI VEULE TE VOLER TON GOUTER TU FAIS QUoI XDD LOL MDR")
-        while 1:
-            a = input("1. donner le gouter 2. s'enfuir 3. se BATTRE #violence")
-            try:
-                int(a)
-            except ValueError:
-                print("MAIS UN CHIFFRES HAHAHAHHA MDR XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD")
-                continue
-            a = int(a)
-            if a == 1:
-                print("Ta donné le gouté et té pa mors #triste #collège #no #;(")
-                depression = depression + 15
-                break
-            elif a == 2:
-                if randint(0, 1) == 1:
-                    print("BRAVO BRAVO !!!!!!!!!?????!!!! kgfvjbhibiu tA RéUSI")
-                else:
-                    print("TU Té Fé AVOIR HAHHAHAHAHAHA tê NULLE MDRRRRRRRRRRR")
-                    depression = depression + 5
-                break
-            elif a == 3:
-                if randint(1, 3) == 3:
-                    print("YES KO KO KO LE 3ème EST KOOOOOOOOOOOOO KZIEUHFLBZHZULKEFUKZJNEFJZBHEYFLKIZEJHNFMIOZKNEF")
-                    depression = depression - 15
-                else:
-                    print("ohoohohohohoh ta pa réUSSIIII MDR XDDDDDDDDDDDDDDDd")
-                    depression = depression + 20
-                break
+
     if depression < 1:  # fix negative depression
         depression = 0
     garbage = input("appuie sur entrer pour terminer la journé")
