@@ -27,7 +27,6 @@ Listez les versions ici
 Liste des versions : [Cliquer pour afficher](https://github.com/SomeMinecraftModder/collegesim/tags)
 
 ## Auteurs
-Listez le(s) auteur(s) du projet ici !
 * **SomeMinecraftModder** (https://github.com/SomeMinecraftModder)
 
 Lisez la liste des [contributeurs](https://github.com/SomeMinecraftModder/collegesim/contributors) pour voir qui à aidé au projet !
