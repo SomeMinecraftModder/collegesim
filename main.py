@@ -2,7 +2,7 @@ from random import choice, randint, seed
 from colorama import Fore, Back, Style
 
 print("whaou bienvenue à collège simulator !!!")
-print("v 0.3 version public")
+print("v 0.2.0 version public")
 a = input("whaou c'est quoi ton nom ???")
 seed(a)  # can't wait for speedrun set-seed
 print("erreur: ton nom est maintenant jean-pierre decrochage")
