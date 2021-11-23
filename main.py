@@ -3,7 +3,6 @@ from colorama import Fore, Back, Style
 
 print("whaou bienvenue à collège simulator !!!")
 print("v 0.3 version public")
-print("Le seul jeu sponsorisé par https://webgarbage.fr")
 a = input("whaou c'est quoi ton nom ???")
 seed(a)  # can't wait for speedrun set-seed
 print("erreur: ton nom est maintenant jean-pierre decrochage")
@@ -14,6 +13,8 @@ qi = 120
 depression = 0
 jour = 1
 heure_de_colle = 0
+prof_say_list = ["t'est nul!", "non mais n'importe quoi" "hein ? que veux dire le mot \"cool\" ?",
+                 "non, pas de question!", "punition collective !", "vous n'aurez pas toujours une calculatrice !"]
 observation = 0
 sanction = False
 edt = [[0, 1, 2], [1, 0, 2], [0, 2, 1], [2, 0, 1], [2, 1, 0]]
@@ -58,7 +59,7 @@ while 1:
         current_day_number = jour % 7 - 1
         edt_current = edt[current_day_number]
         for x in edt_current:
-            print("%s : t'est nul !" % nomprof[x])
+            print("%s : %s" % (nomprof[x], choice(prof_say_list)))
             thing = randint(1, 10)
             if thing == 1:
                 b = randint(1, 5)
@@ -76,9 +77,29 @@ while 1:
             else:
                 print(Fore.LIGHTGREEN_EX + "t'a de la chance que t'a rien !!!")
                 print(Style.RESET_ALL)
-            garbage = input("1. suivre les cours de l'éducation national™® 2. ne rien faire 3. tiago (bêta)")
-
-
+            while 1:
+                yes = input("1. suivre les cours de l'éducation national™® 2. ne rien faire 3. tiago (bêta)")
+                try:
+                    truc = int(yes)
+                except ValueError:
+                    print(":|")
+                    continue
+                if truc == 1:
+                    print("waow tU SUI LE COUR INCROYABLE")
+                    depression = depression + 2
+                    qi = qi + 7
+                    break
+                elif truc == 2:
+                    print("Oh NOn Tu A RiEn FaIT OMG :o :OOOOOO COMMENT #prof #education #mince")
+                    if randint(0, 1) == 1:
+                        print("OOHOHOHOHO LA PRoF A reMARQUé QUE TA rIeN FAit #prof")
+                        depression = depression + 3
+                    else:
+                        print("la prof n'a rien remarqué !!!!!! omg #hashtag")
+                        depression = depression - 5
+                else:
+                    print(":|")
+                    continue
         while 1:  # loop for input
             f = input("(1)travailler ou se (2)reposer ?")
             try:
