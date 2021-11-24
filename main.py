@@ -8,7 +8,7 @@ seed(a)  # can't wait for speedrun set-seed
 print("erreur: ton nom est maintenant jean-pierre decrochage")
 
 fun_name_for_day = ["souffrance", "ennuyance", "inutile", "interweb", "pipi caca prout", "je", "fun", "i like life"]
-nomprof = ("enfoiré: math", "amé: français", "gégoutosaure: histoire", "pizza: science")
+nomprof = ("enfoiré: math", "amé: français", "gégoutosaure: histoire", "pizza: science", "matasse: anglais")
 qi = 120
 depression = 0
 jour = 0
@@ -16,10 +16,11 @@ heure_de_colle = 0
 prof_say_list = ["t'est nul!", "non mais n'importe quoi" "hein ? que veux dire le mot \"cool\" ?",
                  "non, pas de question!", "punition collective !", "vous n'aurez pas toujours une calculatrice !",
                  "ton masque !", "sortez vos affaires, les enfants !", "oui, oui, vous devez imprimer ça!",
-                 "vous devez faire une belle page de présentation pour l'hivers!", "mais oui c'est très important"]
+                 "vous devez faire une belle page de présentation pour l'hivers!", "mais oui c'est très important",
+                 "in english please!"]
 observation = 0
 sanction = False
-edt = [[0, 1, 2], [1, 0, 2], [0, 2, 1], [2, 0, 1], [2, 1, 0]]
+edt = [[0, 0, 2, 1, 4], [1, 1, 4, 0], [3, 3, 1, 2], [2, 0, 4, 3, 3], [1, 2]]
 name_of_day = ["Lundi", "Mardi", 'Mercredi', "Jeudi", "Vendredi", "Samedi", "Dimanche"]
 
 while 1:
