@@ -8,17 +8,19 @@ seed(a)  # can't wait for speedrun set-seed
 print("erreur: ton nom est maintenant jean-pierre decrochage")
 
 fun_name_for_day = ["souffrance", "ennuyance", "inutile", "interweb", "pipi caca prout", "je", "fun", "i like life"]
-nomprof = ("enfoiré: math", "amé: français", "gégoutosaure: histoire")
+nomprof = ("enfoiré: math", "amé: français", "gégoutosaure: histoire", "pizza: science")
 qi = 120
 depression = 0
-jour = 1
+jour = 0
 heure_de_colle = 0
 prof_say_list = ["t'est nul!", "non mais n'importe quoi" "hein ? que veux dire le mot \"cool\" ?",
-                 "non, pas de question!", "punition collective !", "vous n'aurez pas toujours une calculatrice !"]
+                 "non, pas de question!", "punition collective !", "vous n'aurez pas toujours une calculatrice !",
+                 "ton masque !", "sortez vos affaires, les enfants !", "oui, oui, vous devez imprimer ça!",
+                 "vous devez faire une belle page de présentation pour l'hivers!", "mais oui c'est très important"]
 observation = 0
 sanction = False
 edt = [[0, 1, 2], [1, 0, 2], [0, 2, 1], [2, 0, 1], [2, 1, 0]]
-name_of_day = ["Lundi", "Mardi", 'Mercredi', "Jeudi", "Vendredie", "Samedi", "Dimanche"]
+name_of_day = ["Lundi", "Mardi", 'Mercredi', "Jeudi", "Vendredi", "Samedi", "Dimanche"]
 
 while 1:
     print(Fore.BLACK)
@@ -26,7 +28,7 @@ while 1:
     print("Jour de la semaine: %s" % name_of_day[jour % 7])
     print(Style.RESET_ALL)
     jour = jour + 1
-    if not (jour % 7 == 6 or jour % 7 == 7):
+    if not (jour % 7 == 6 or jour % 7 == 0):
         if randint(0, 2) == 1:
             print("WAOW YA DES 3ème QUI VEULE TE VOLER TON GOUTER TU FAIS QUoI XDD LOL MDR")
             while 1:
@@ -97,6 +99,7 @@ while 1:
                     else:
                         print("la prof n'a rien remarqué !!!!!! omg #hashtag")
                         depression = depression - 5
+                    break
                 else:
                     print(":|")
                     continue
