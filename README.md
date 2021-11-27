@@ -17,7 +17,7 @@ Recliquer sur le fichier "main.py", c'est pas très compliquer.
 ## Fabriqué avec
 
 
-* [Python3](http://python.org) - Framework CSS (front-end)
+* [Python3](http://python.org) - Language de programmation
 * [PyCharm](https://www.jetbrains.com/fr-fr/pycharm/) - Editeur de textes
 
 
