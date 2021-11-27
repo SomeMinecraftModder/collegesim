@@ -17,7 +17,7 @@ prof_say_list = ["t'est nul!", "non mais n'importe quoi" "hein ? que veux dire l
                  "non, pas de question!", "punition collective !", "vous n'aurez pas toujours une calculatrice !",
                  "ton masque !", "sortez vos affaires, les enfants !", "oui, oui, vous devez imprimer ça!",
                  "vous devez faire une belle page de présentation pour l'hivers!", "mais oui c'est très important",
-                 "in english please!"]
+                 "in english please!", "pas de produit en croix"]
 observation = 0
 sanction = False
 edt = [[0, 0, 2, 1, 4], [1, 1, 4, 0], [3, 3, 1, 2], [2, 0, 4, 3, 3], [1, 2]]
@@ -90,7 +90,7 @@ while 1:
                 if truc == 1:
                     print("waow tU SUI LE COUR INCROYABLE")
                     depression = depression + 2
-                    qi = qi + 7
+                    qi = qi + 17
                     break
                 elif truc == 2:
                     print("Oh NOn Tu A RiEn FaIT OMG :o :OOOOOO COMMENT #prof #education #mince")
@@ -100,6 +100,42 @@ while 1:
                     else:
                         print("la prof n'a rien remarqué !!!!!! omg #hashtag")
                         depression = depression - 5
+                    break
+                elif truc == 3:
+                    depression = depression - 5
+                    qi = qi - 7
+                    while 1:
+                        abc = input("choisi ton arme: 1.boulettes de papier 2. ciseaux dans la gorge 3. compas")
+                        try:
+                            zxy = int(abc)
+                        except ValueError:
+                            print("AHAHHAHA CHOISI UNE ARME AHAHAH XDDDD LOL MDR LOL LUL prout hahahahahahah")
+                            continue
+                        if zxy == 1:
+                            if randint(0, 1):
+                                print("la boulette de papier attaint le prof!")
+                                depression = depression - 14
+                            else:
+                                print("la boulette de papier n'a pas attaint le prof! #sad")
+                                depression = depression + 5
+                            break
+                        elif zxy == 2:
+                            if randint(0, 1):
+                                print("LE PROF EST MORT !!!!! #mort #ché #khoul #bienfé")
+                            else:
+                                print("oHohO lA ProF ä eSquiVé le cIsEAux !!!!11!1!11!1! tA UNE SANctiOn !!!!!!!!????")
+                                sanction = True
+                            break
+                        elif zxy == 3:
+                            if randint(0, 1):
+                                print("LE PROF EST MORT !!!!! #mort #ché #khoul #bienfé")
+                            else:
+                                print("oHohO lA ProF ä eSquiVé le CompA !!!!11!1!11!1! tA UNE SANctiOn !!!!!!!!????")
+                                sanction = True
+                            break
+                        else:
+                            print("AHHAHAHAHHAHAHAHAHHAAHHAHH MAIS UN TRUC §!!!!!!!!!!!!!!!!!!!!!!!!!")
+                            continue
                     break
                 else:
                     print(":|")
