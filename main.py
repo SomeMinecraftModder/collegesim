@@ -12,6 +12,7 @@ nomprof = ("enfoiré: math", "amé: français", "gégoutosaure: histoire", "pizz
 qi = 120
 depression = 0
 jour = 0
+argent = 0.
 heure_de_colle = 0
 prof_say_list = ["t'est nul!", "non mais n'importe quoi" "hein ? que veux dire le mot \"cool\" ?",
                  "non, pas de question!", "punition collective !", "vous n'aurez pas toujours une calculatrice !",
@@ -61,7 +62,12 @@ while 1:
                     break
         current_day_number = jour % 7 - 1
         edt_current = edt[current_day_number]
+        current_hour = 0
         for x in edt_current:
+            if current_hour % 2 == 0:
+                print("WAOW c'ESt L'eur DE lA RéCRéatIoN Les EnfAntS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                while 1:
+                    no = input("1. socialiser 2.voler des truc #illégale")
             print("%s : %s" % (nomprof[x], choice(prof_say_list)))
             thing = randint(1, 10)
             if thing == 1:
@@ -140,6 +146,7 @@ while 1:
                 else:
                     print(":|")
                     continue
+            current_hour = current_hour + 1
         while 1:  # loop for input
             f = input("(1)travailler ou se (2)reposer ?")
             try:
