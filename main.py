@@ -80,6 +80,8 @@ while 1:
                         print("VAS TU RéuSSIER A TE SOCIALISER ??????????????????????????????????????????")
                         amis = amis + randint(-1, 2)  # def. very stable
                         depression = depression + randint(-5, 5)  # umh
+                        print("LA RéPONSE DANS LE BILAN")
+                        break
                     elif yesnt == 2:
                         print("#ilègal")
                         why = randint(0, 2)
@@ -100,8 +102,24 @@ while 1:
                             garbage_2 = randint(1, 5)
                             print("OHOOH TU Tê Fé AvOire !!!!!!! %s heurs de cOOLLLLE !!!!!!!!!!!!!!" % garbage_2)
                             heure_de_colle = heure_de_colle + garbage_2
+                        break
                     elif yesnt == 3:
-                        print("not implemented (yet)")
+                        waow = randint(0, 4)
+                        if waow == 0:
+                            print("ta rien trouvé :(((((((((((((((((")
+                        elif waow == 1:
+                            hot_pile_of_garbage = randint(0, 15)
+                            print("Té alé sur le tois !!!!!!!! tà trouvé %s €€€€€€€€€€€€€€€€€")
+                            argent = argent + hot_pile_of_garbage
+                        elif waow == 2:
+                            print("tu à creusé é t'a trouvê un AntiDepression2000 !!! :)))))) ;) ;) OMMG§!!!!!!!")
+                            depression = depression - 15
+                        elif waow == 3:
+                            print("tU à TrouVêe De largent Dans LE CA(ca)davrE de quelquin !!!!!!!")
+                            argent = argent + 15
+                        elif waow == 4:
+                            print("tà creusé dan let mure et ta trouvé RIENNNNNN :::))))))))))) OOHAHAHAHAAHAHAHAH")
+                        break
                     elif yesnt == 4:
                         print("waow ta rien fé!!!!!")
                         break
