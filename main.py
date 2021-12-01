@@ -70,18 +70,41 @@ while 1:
             if current_hour % 2 == 1:
                 print("WAOW c'ESt L'eur DE lA RéCRéatIoN Les EnfAntS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                 while 1:
-                    no = input("1. socialiser 2.voler des truc #illégale 3.explorer pour de l'argent")
+                    no = input("1. socialiser 2.voler des truc #illégale 3.explorer pour de l'argent 4.rien faire")
                     try:
                         yesnt = int(no)
                     except ValueError:
                         print("choisi un chifre sinön ons teu *chiffre* des heur deu coll!!!???!?💩💩💩💩💩💩💩💩💩💩💩💩💩")
                         continue
                     if yesnt == 1:
-                        print("")
+                        print("VAS TU RéuSSIER A TE SOCIALISER ??????????????????????????????????????????")
+                        amis = amis + randint(-1, 2)  # def. very stable
+                        depression = depression + randint(-5, 5)  # umh
                     elif yesnt == 2:
-                        pass
+                        print("#ilègal")
+                        why = randint(0, 2)
+                        if randint(0, 1) == 1:
+                            if why == 0:
+                                print("waowowoowa té réusi à pickpokété quelquin omg #:/")
+                                depression = depression - 5
+                                argent = argent + randint(1, 15)
+                            elif why == 1:
+                                print("tU â trOuvè une pièce SUR LE **SOL** (〇□〇")
+                                argent = argent + 0.01  # lmao
+                            elif why == 2:
+                                print("Une disruption dans le continuum espace-temps a créer une modification dans "
+                                      "le champ quantique, donc Tu PErT De l'ArGEnT LOLOLO MDR GGGGGGG OMG!!!!!! :("
+                                      "((((((")
+                                argent = argent - randint(1, 10)
+                        else:
+                            garbage_2 = randint(1, 5)
+                            print("OHOOH TU Tê Fé AvOire !!!!!!! %s heurs de cOOLLLLE !!!!!!!!!!!!!!" % garbage_2)
+                            heure_de_colle = heure_de_colle + garbage_2
                     elif yesnt == 3:
-                        pass
+                        print("not implemented (yet)")
+                    elif yesnt == 4:
+                        print("waow ta rien fé!!!!!")
+                        break
                     else:
                         print("un chiffr entr 1 et troix :!!!!!!!!!?? :))))))))))))))))")
                         continue
@@ -200,6 +223,8 @@ while 1:
             break
         if amis < 1:
             amis = 0
+        if argent < 1:
+            argent = 0
         print("---bilan---")
         print("heure de colle: %s" % heure_de_colle)
         print("observation: %s" % observation)
@@ -217,6 +242,7 @@ while 1:
         print("depression: %s" % depression)
         print("qi: %s" % qi)
         print("amis: %s" % amis)
+        print("argent: %s" % argent)
         truc = None
     garbage = input("appuie sur entrer pour terminer la journé")
     print("\n" * 1)
