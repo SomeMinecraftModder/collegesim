@@ -13,12 +13,15 @@ qi = 120
 depression = 0
 jour = 0
 argent = 0.
+amis = 0
 heure_de_colle = 0
 prof_say_list = ["t'est nul!", "non mais n'importe quoi" "hein ? que veux dire le mot \"cool\" ?",
                  "non, pas de question!", "punition collective !", "vous n'aurez pas toujours une calculatrice !",
                  "ton masque !", "sortez vos affaires, les enfants !", "oui, oui, vous devez imprimer ça!",
                  "vous devez faire une belle page de présentation pour l'hivers!", "mais oui c'est très important",
-                 "in english please!", "pas de produit en croix"]
+                 "in english please!", "pas de produit en croix",
+                 "liste die untrennbaren Partikel auf, sonst bleibe ich bei dir",
+                 "Vous ête nul vout comprenez rien au DEUTSCH "]
 observation = 0
 sanction = False
 edt = [[0, 0, 2, 1, 4], [1, 1, 4, 0], [3, 3, 1, 2], [2, 0, 4, 3, 3], [1, 2]]
@@ -64,10 +67,24 @@ while 1:
         edt_current = edt[current_day_number]
         current_hour = 0
         for x in edt_current:
-            if current_hour % 2 == 0:
+            if current_hour % 2 == 1:
                 print("WAOW c'ESt L'eur DE lA RéCRéatIoN Les EnfAntS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                 while 1:
-                    no = input("1. socialiser 2.voler des truc #illégale")
+                    no = input("1. socialiser 2.voler des truc #illégale 3.explorer pour de l'argent")
+                    try:
+                        yesnt = int(no)
+                    except ValueError:
+                        print("choisi un chifre sinön ons teu *chiffre* des heur deu coll!!!???!?💩💩💩💩💩💩💩💩💩💩💩💩💩")
+                        continue
+                    if yesnt == 1:
+                        print("")
+                    elif yesnt == 2:
+                        pass
+                    elif yesnt == 3:
+                        pass
+                    else:
+                        print("un chiffr entr 1 et troix :!!!!!!!!!?? :))))))))))))))))")
+                        continue
             print("%s : %s" % (nomprof[x], choice(prof_say_list)))
             thing = randint(1, 10)
             if thing == 1:
@@ -181,6 +198,8 @@ while 1:
         if heure_de_colle > 30 or observation > 30:
             print("t'est mort ahhahaha t'a trop d'heure de colles/observation ahhahah")
             break
+        if amis < 1:
+            amis = 0
         print("---bilan---")
         print("heure de colle: %s" % heure_de_colle)
         print("observation: %s" % observation)
@@ -193,10 +212,11 @@ while 1:
             d = d + 15
             sanction = False
         depression = int(d)
-        print("depression: %s" % depression)
         e = qi - (depression / 25)
         qi = int(e)
+        print("depression: %s" % depression)
         print("qi: %s" % qi)
+        print("amis: %s" % amis)
         truc = None
     garbage = input("appuie sur entrer pour terminer la journé")
     print("\n" * 1)
