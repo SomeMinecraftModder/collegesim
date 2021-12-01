@@ -22,8 +22,7 @@ Recliquer sur le fichier "main.py", c'est pas très compliquer.
 
 
 ## Versions
-Listez les versions ici 
-**Dernière version stable :** 0.2.0
+**Dernière version stable :** 0.3.0
 Liste des versions : [Cliquer pour afficher](https://github.com/SomeMinecraftModder/collegesim/tags)
 
 ## Auteurs
