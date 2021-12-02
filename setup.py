@@ -4,7 +4,6 @@ from cx_Freeze import setup, Executable
 # "packages": ["os"] is used as example only
 build_exe_options = {"packages": ["colorama"]}
 
-
 setup(
     name="Collège Simulator",
     version="0.3.0",

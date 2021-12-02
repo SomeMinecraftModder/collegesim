@@ -269,7 +269,8 @@ if randint(0, 1):
     print("tes parents ont pleuré pour toi... il te regrette !")
 else:
     print("tes parents n'ont pas pleuré pour toi... il te regrette pas !")
-score = (depression * 100) + (observation * 100) + (qi * 150) + heure_de_colle + (jour * 100)
+score = (depression * 100) + (observation * 100) + (qi * 150) + heure_de_colle + (jour * 100) + (argent * 200) + \
+        (amis * 50)
 print("score: %s" % score)
 while 1:
     pass
