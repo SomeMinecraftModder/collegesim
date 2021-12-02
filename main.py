@@ -109,7 +109,7 @@ while 1:
                             print("ta rien trouvé :(((((((((((((((((")
                         elif waow == 1:
                             hot_pile_of_garbage = randint(0, 15)
-                            print("Té alé sur le tois !!!!!!!! tà trouvé %s €€€€€€€€€€€€€€€€€")
+                            print("Té alé sur le tois !!!!!!!! tà trouvé %s €€€€€€€€€€€€€€€€€" % hot_pile_of_garbage)
                             argent = argent + hot_pile_of_garbage
                         elif waow == 2:
                             print("tu à creusé é t'a trouvê un AntiDepression2000 !!! :)))))) ;) ;) OMMG§!!!!!!!")
