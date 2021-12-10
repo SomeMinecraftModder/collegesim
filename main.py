@@ -206,7 +206,6 @@ while 1:
                     continue
             current_hour = current_hour + 1
         print("WAoW Tu vA PrendRE lE bUS AHhhAHHAhHAhAHAAHAH!!!!!???§§§§§??§?§?")
-
         while 1:  # loop for input
             f = input("(1)travailler ou se (2)reposer ?")
             try:
